@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言板</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 登录/注册区域 -->
+    <div id="auth-section">
+      <h2 id="form-title">登录</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="用户名" required>
+        <input type="password" id="password" placeholder="密码" required>
+        <button type="submit" id="auth-btn">登录</button>
+      </form>
+      <p><a href="#" id="toggle-auth">没有账号？去注册</a></p>
+      <p id="auth-msg"></p>
+    </div>
+
+    <!-- 留言板区域（登录后显示） -->
+    <div id="board-section" style="display:none;">
+      <h2>留言板</h2>
+      <p>欢迎，<span id="current-user"></span>！<a href="#" id="logout">退出</a></p>
+      
+      <form id="msg-form">
+        <textarea id="msg-content" placeholder="说点什么..." required></textarea>
+        <button type="submit">发布留言</button>
+      </form>
+
+      <div id="messages"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
